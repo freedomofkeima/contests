@@ -7,6 +7,11 @@ remote=$(git config remote.origin.url)
 
 # make a directory
 mkdir gh-pages-branch
+
+# we can do something here, e.g., generate required HTML file
+# TODO: Update this line
+python generator.py
+
 cd gh-pages-branch
 
 # Setup a new repo
@@ -24,10 +29,6 @@ then
 else
     git checkout --orphan gh-pages
 fi
-
-# we can do something here, e.g., generate required HTML file
-# TODO: Update this line
-python generator.py
 
 # stage any changes and new files
 git add -A
