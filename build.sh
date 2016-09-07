@@ -25,8 +25,9 @@ else
     git checkout --orphan gh-pages
 fi
 
-# we can do something here, e.g., generate file
-touch index.html
+# we can do something here, e.g., generate required HTML file
+# TODO: Update this line
+python generator.py
 
 # stage any changes and new files
 git add -A
